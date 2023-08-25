@@ -1,5 +1,9 @@
 # testTask
 
+Выполнил работу на языке Java, IDE - IntelliJ IDEA.
+
+В ходе работы использовал API Openrouteservice (ORS)
+
 В проекте находятся 2 версии - главная, с использованием ORS API и побочная с 2-D матрицой.
 
 Сайт Openrouteservice - https://openrouteservice.org/
