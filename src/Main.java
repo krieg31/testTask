@@ -125,6 +125,8 @@ public class Main {
         System.out.println("durationsFromDriverBtoPassengerB = " + durationsFromDriverBtoPassB);
         //Вычисление пути от точки Б водителя до точки Б пассажира КОНЕЦ//
 
+
+        //Вычисление "чистого" пути водителя НАЧАЛО
         Entity<String> DriverADriverB = Entity.json("{\"locations\":[[" +
                 Driver.cooridinateA1 + "," + Driver.cooridinateA2 + "],[" +
                 Driver.cooridinateB1 + "," + Driver.cooridinateB2 + "]]," +
@@ -140,10 +142,10 @@ public class Main {
         JSONObject jsonObj6 = (JSONObject) obj6;
         JSONArray durationsFromDriverAtoDriverB = (JSONArray) jsonObj6.get("durations");
         durationsFromDriverAtoDriverB = (JSONArray) durationsFromDriverAtoDriverB.get(0);
-        //в первом значении хранится время пути с точки само к себе, т.е. всегда 0.
         durationsFromDriverAtoDriverB.remove(0);
         System.out.println("durationsFromDriverAtoDriverB = " + durationsFromDriverAtoDriverB);
-        //Вычисление пути от точки Б водителя до точки Б пассажира КОНЕЦ//
+        //Вычисление "чистого" пути водителя КОНЕЦ
+
 
         //Вычисление длительности пути для всех маршрутов и поиск лучшего
         int optimumRoute=0;
